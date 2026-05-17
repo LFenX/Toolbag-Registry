@@ -1,0 +1,110 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://toolbag.lfen.dev/schemas/plugin/1.json",
+  "title": "Toolbag Plugin Manifest",
+  "type": "object",
+  "required": [
+    "id",
+    "name",
+    "version",
+    "category",
+    "description",
+    "minAppVersion",
+    "riskLevel",
+    "runtime",
+    "commands"
+  ],
+  "additionalProperties": true,
+  "properties": {
+    "$schema": { "type": "string" },
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9]*(\\.[a-z][a-z0-9-]*)+$"
+    },
+    "name": { "type": "string", "minLength": 1 },
+    "version": {
+      "type": "string",
+      "pattern": "^(0|[1-9]\\d*)\\.(0|[1-9]\\d*)\\.(0|[1-9]\\d*)(?:[-+][0-9A-Za-z.-]+)?$"
+    },
+    "category": { "type": "string", "minLength": 1 },
+    "tags": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "description": { "type": "string", "minLength": 1 },
+    "detailDescription": { "type": "string" },
+    "author": {
+      "type": "object",
+      "additionalProperties": true,
+      "properties": {
+        "name": { "type": "string" },
+        "url": { "type": "string" }
+      }
+    },
+    "license": { "type": "string" },
+    "homepage": { "type": "string" },
+    "minAppVersion": { "type": "string" },
+    "maxAppVersion": {
+      "anyOf": [{ "type": "string" }, { "type": "null" }]
+    },
+    "riskLevel": {
+      "type": "string",
+      "enum": ["safe", "caution", "elevated"]
+    },
+    "requiresElevation": { "type": "boolean" },
+    "permissionRequirement": { "type": "string" },
+    "dataAccess": { "type": "string" },
+    "icon": { "type": "string" },
+    "runtime": {
+      "type": "object",
+      "required": ["kind"],
+      "additionalProperties": true,
+      "properties": {
+        "kind": {
+          "type": "string",
+          "enum": ["none", "sidecar", "builtin"]
+        },
+        "binary": { "type": "string" },
+        "args": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "env": {
+          "type": "object",
+          "additionalProperties": { "type": "string" }
+        },
+        "startupTimeoutMs": { "type": "integer", "minimum": 0 },
+        "shutdownTimeoutMs": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "commands": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "label"],
+        "additionalProperties": true,
+        "properties": {
+          "id": { "type": "string", "minLength": 1 },
+          "label": { "type": "string", "minLength": 1 },
+          "permissions": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "fs.read",
+                "fs.write",
+                "net",
+                "shell",
+                "registry",
+                "process.list",
+                "services.read"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "ui": { "type": "string" }
+  }
+}

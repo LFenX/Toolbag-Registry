@@ -1,0 +1,141 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://toolbag.lfen.dev/schemas/ui/1.json",
+  "title": "Toolbag Plugin UI Schema",
+  "type": "object",
+  "required": ["layout"],
+  "additionalProperties": true,
+  "properties": {
+    "$schema": { "type": "string" },
+    "layout": {
+      "type": "string",
+      "enum": ["split", "stack", "single", "builtin"]
+    },
+    "builtinRenderer": { "type": "string" },
+    "header": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "left": {
+      "$ref": "#/$defs/panel"
+    },
+    "right": {
+      "type": "object",
+      "additionalProperties": true,
+      "properties": {
+        "kind": { "type": "string" },
+        "title": { "type": "string" },
+        "renderers": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/renderer" }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "option": {
+      "type": "object",
+      "required": ["value"],
+      "additionalProperties": true,
+      "properties": {
+        "value": {
+          "anyOf": [
+            { "type": "string" },
+            { "type": "number" },
+            { "type": "boolean" }
+          ]
+        },
+        "label": { "type": "string" }
+      }
+    },
+    "field": {
+      "type": "object",
+      "required": ["key", "type"],
+      "additionalProperties": true,
+      "properties": {
+        "key": { "type": "string", "minLength": 1 },
+        "type": {
+          "type": "string",
+          "enum": [
+            "text",
+            "textarea",
+            "number",
+            "switch",
+            "select",
+            "multiSelect",
+            "radioGroup",
+            "tabs",
+            "filePicker",
+            "folderPicker",
+            "tagInput",
+            "hidden"
+          ]
+        },
+        "label": { "type": "string" },
+        "help": { "type": "string" },
+        "default": true,
+        "required": { "type": "boolean" },
+        "visibleWhen": { "type": "string" },
+        "disabledWhen": { "type": "string" },
+        "options": {
+          "type": "array",
+          "items": {
+            "anyOf": [{ "$ref": "#/$defs/option" }, { "type": "string" }]
+          }
+        }
+      }
+    },
+    "action": {
+      "type": "object",
+      "required": ["id", "label"],
+      "additionalProperties": true,
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "label": { "type": "string", "minLength": 1 },
+        "command": { "type": "string" },
+        "kind": {
+          "type": "string",
+          "enum": ["command", "cancel", "reset", "open-url", "copy"]
+        },
+        "primary": { "type": "boolean" }
+      }
+    },
+    "panel": {
+      "type": "object",
+      "additionalProperties": true,
+      "properties": {
+        "title": { "type": "string" },
+        "fields": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/field" }
+        },
+        "actions": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/action" }
+        }
+      }
+    },
+    "renderer": {
+      "type": "object",
+      "required": ["type"],
+      "additionalProperties": true,
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "text",
+            "code",
+            "keyValue",
+            "table",
+            "list",
+            "log",
+            "progress",
+            "status"
+          ]
+        },
+        "source": { "type": "string" },
+        "showWhen": { "type": "string" }
+      }
+    }
+  }
+}
