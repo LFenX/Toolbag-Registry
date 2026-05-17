@@ -3,6 +3,15 @@
   "repo": "LFenX/toolbag-plugin-HashAndBase64",
   "releases": [
     {
+      "version": "0.1.2",
+      "minAppVersion": "0.2.0",
+      "publishedAt": "2026-05-17T14:13:02.856Z",
+      "downloadUrl": "https://github.com/LFenX/toolbag-plugin-HashAndBase64/releases/download/v0.1.2/toolbag-plugin-com-lfen-toolbag-hash-and-base64-0.1.2.tbpkg",
+      "signatureUrl": "https://github.com/LFenX/toolbag-plugin-HashAndBase64/releases/download/v0.1.2/toolbag-plugin-com-lfen-toolbag-hash-and-base64-0.1.2.tbpkg.sig",
+      "sha256": "62c952ca73c1c6ff4a303926e5affe43e5eca7e32163d75d9eab39e2e5ac07ea",
+      "changelog": "- Fixed the initial empty form by treating an unset `mode` as Hash mode."
+    },
+    {
       "version": "0.1.1",
       "minAppVersion": "0.2.0",
       "publishedAt": "2026-05-17T13:52:31.826Z",
@@ -33,7 +42,7 @@
     "调试"
   ],
   "riskLevel": "safe",
-  "iconUrl": "https://raw.githubusercontent.com/LFenX/toolbag-plugin-HashAndBase64/v0.1.1/icon.svg",
+  "iconUrl": "https://raw.githubusercontent.com/LFenX/toolbag-plugin-HashAndBase64/v0.1.2/icon.svg",
   "author": {
     "name": "LFen",
     "url": "https://github.com/LFenX"
