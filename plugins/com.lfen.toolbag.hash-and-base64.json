@@ -1,0 +1,33 @@
+{
+  "id": "com.lfen.toolbag.hash-and-base64",
+  "repo": "LFenX/toolbag-plugin-HashAndBase64",
+  "releases": [
+    {
+      "version": "0.1.0",
+      "minAppVersion": "0.2.0",
+      "publishedAt": "2026-05-17T12:32:23.772Z",
+      "downloadUrl": "https://github.com/LFenX/toolbag-plugin-HashAndBase64/releases/download/v0.1.0/toolbag-plugin-com-lfen-toolbag-hash-and-base64-0.1.0.tbpkg",
+      "signatureUrl": "https://github.com/LFenX/toolbag-plugin-HashAndBase64/releases/download/v0.1.0/toolbag-plugin-com-lfen-toolbag-hash-and-base64-0.1.0.tbpkg.sig",
+      "sha256": "1546ce074a35254fbaf4dc171b67776f7bc88b1cbfdccacf30a49f09cb668abb",
+      "changelog": "- Initial release.\n- Text hash: MD5, SHA-1, SHA-256, SHA-512.\n- Base64 encode / decode with UTF-8 round-tripping (Chinese, emoji).\n- HMAC-SHA256 with hex + base64 outputs.\n- JWT header / payload decode with human-readable `iat`, `exp`, `nbf`."
+    }
+  ],
+  "name": "Hash & Base64",
+  "description": "本地计算文本哈希、Base64 编解码、HMAC 签名与 JWT 解析。",
+  "detailDescription": "支持 MD5/SHA-1/SHA-256/SHA-512 文本哈希、Base64 编解码（UTF-8 友好，正确处理中文与 Emoji）、HMAC-SHA256 签名（适合 Webhook/接口调试）以及 JWT 头部与载荷解析。全部在本机运行，不联网。",
+  "category": "实用",
+  "tags": [
+    "加密",
+    "编码",
+    "调试",
+    "实用"
+  ],
+  "riskLevel": "safe",
+  "iconUrl": "https://raw.githubusercontent.com/LFenX/toolbag-plugin-HashAndBase64/v0.1.0/icon.svg",
+  "author": {
+    "name": "LFen",
+    "url": "https://github.com/LFenX"
+  },
+  "homepage": "https://github.com/LFenX/toolbag-plugin-HashAndBase64",
+  "license": "MIT"
+}
