@@ -51,7 +51,7 @@ for (const file of pluginFiles) {
     publishedAt: latest.publishedAt,
     size: latest.size ?? null,
     changelog: latest.changelog ?? null,
-    author: plugin.author ?? null,
+    author: normalizeAuthor(plugin.author),
   });
 }
 
@@ -105,4 +105,17 @@ function parseSemver(version) {
 
 function prereleaseRank(value) {
   return value ? `-${value}` : "";
+}
+
+function normalizeAuthor(author) {
+  if (author == null) {
+    return null;
+  }
+  if (typeof author === "string") {
+    return author;
+  }
+  if (typeof author === "object") {
+    return author.name ?? author.url ?? null;
+  }
+  return null;
 }
