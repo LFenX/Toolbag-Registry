@@ -3,6 +3,15 @@
   "repo": "LFenX/toolbag-plugin-HashAndBase64",
   "releases": [
     {
+      "version": "0.1.1",
+      "minAppVersion": "0.2.0",
+      "publishedAt": "2026-05-17T13:52:31.826Z",
+      "downloadUrl": "https://github.com/LFenX/toolbag-plugin-HashAndBase64/releases/download/v0.1.1/toolbag-plugin-com-lfen-toolbag-hash-and-base64-0.1.1.tbpkg",
+      "signatureUrl": "https://github.com/LFenX/toolbag-plugin-HashAndBase64/releases/download/v0.1.1/toolbag-plugin-com-lfen-toolbag-hash-and-base64-0.1.1.tbpkg.sig",
+      "sha256": "2cae4f09a2cf14de668f8e08625d53d403559ebd29882bb263438779b8e67b21",
+      "changelog": "- Fixed mode switching: fields now show only for the selected task.\n- Split Base64 into separate Encode and Decode tabs.\n- Simplified the copy path: \"复制核心结果\" copies the direct output string.\n- Improved validation messages and normalized sidecar output to `{ summary, data.result }`.\n- Added sidecar tests for default Hash mode, Base64 round-trip and JWT time formatting."
+    },
+    {
       "version": "0.1.0",
       "minAppVersion": "0.2.0",
       "publishedAt": "2026-05-17T12:32:23.772Z",
@@ -13,17 +22,18 @@
     }
   ],
   "name": "Hash & Base64",
-  "description": "本地计算文本哈希、Base64 编解码、HMAC 签名与 JWT 解析。",
-  "detailDescription": "支持 MD5/SHA-1/SHA-256/SHA-512 文本哈希、Base64 编解码（UTF-8 友好，正确处理中文与 Emoji）、HMAC-SHA256 签名（适合 Webhook/接口调试）以及 JWT 头部与载荷解析。全部在本机运行，不联网。",
+  "description": "本地计算文本 Hash、Base64 编解码、HMAC-SHA256 签名与 JWT 解析。",
+  "detailDescription": "面向日常开发调试的本地小工具：粘贴文本即可计算 Hash、Base64 编解码、生成 HMAC-SHA256 签名，或解析 JWT header/payload。全部在本机运行，不联网，不读写文件。",
   "category": "实用",
   "tags": [
-    "加密",
-    "编码",
-    "调试",
-    "实用"
+    "哈希",
+    "Base64",
+    "HMAC",
+    "JWT",
+    "调试"
   ],
   "riskLevel": "safe",
-  "iconUrl": "https://raw.githubusercontent.com/LFenX/toolbag-plugin-HashAndBase64/v0.1.0/icon.svg",
+  "iconUrl": "https://raw.githubusercontent.com/LFenX/toolbag-plugin-HashAndBase64/v0.1.1/icon.svg",
   "author": {
     "name": "LFen",
     "url": "https://github.com/LFenX"
