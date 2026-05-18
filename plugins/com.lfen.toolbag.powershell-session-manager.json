@@ -1,0 +1,33 @@
+{
+  "id": "com.lfen.toolbag.powershell-session-manager",
+  "repo": "LFenX/toolbag-plugin-PowerShellSessionManager",
+  "releases": [
+    {
+      "version": "0.1.0",
+      "minAppVersion": "0.3.0",
+      "publishedAt": "2026-05-18T02:38:01Z",
+      "downloadUrl": "https://github.com/LFenX/toolbag-plugin-PowerShellSessionManager/releases/download/v0.1.0/toolbag-plugin-com.lfen.toolbag.powershell-session-manager-0.1.0.tbpkg",
+      "signatureUrl": "https://github.com/LFenX/toolbag-plugin-PowerShellSessionManager/releases/download/v0.1.0/toolbag-plugin-com.lfen.toolbag.powershell-session-manager-0.1.0.tbpkg.sig",
+      "sha256": "e8c6b14644d28926084823c3be59481a22e43560c77fbefecd92d773c534cebe",
+      "size": 310790,
+      "changelog": "- Initial release.\n- Sidecar for the built-in Toolbag PowerShell Session Manager UI.\n- Manages multiple PowerShell sessions, command notes, groups, logs, and recent terminal buffers."
+    }
+  ],
+  "name": "PowerShell 多会话管理器",
+  "description": "管理多个 PowerShell 会话、长期运行进程、常用命令、备注和日志。",
+  "detailDescription": "面向开发工作流的 PowerShell 多会话工作台。UI 内置于 Toolbag 0.3.0，sidecar 通过插件包分发。",
+  "category": "开发",
+  "tags": [
+    "PowerShell",
+    "终端",
+    "开发",
+    "进程"
+  ],
+  "riskLevel": "caution",
+  "author": {
+    "name": "LFen",
+    "url": "https://github.com/LFenX"
+  },
+  "homepage": "https://github.com/LFenX/toolbag-plugin-PowerShellSessionManager",
+  "license": "MIT"
+}
