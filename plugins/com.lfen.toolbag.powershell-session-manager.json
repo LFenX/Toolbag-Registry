@@ -3,6 +3,16 @@
   "repo": "LFenX/toolbag-plugin-PowerShellSessionManager",
   "releases": [
     {
+      "version": "0.2.0",
+      "minAppVersion": "0.3.2",
+      "publishedAt": "2026-05-18T04:12:49Z",
+      "downloadUrl": "https://github.com/LFenX/toolbag-plugin-PowerShellSessionManager/releases/download/v0.2.0/toolbag-plugin-com.lfen.toolbag.powershell-session-manager-0.2.0.tbpkg",
+      "signatureUrl": "https://github.com/LFenX/toolbag-plugin-PowerShellSessionManager/releases/download/v0.2.0/toolbag-plugin-com.lfen.toolbag.powershell-session-manager-0.2.0.tbpkg.sig",
+      "sha256": "a50c053a4cf679a59fd61f802f5c00fd212aa5699e90d2cdeb31e02e0697be8f",
+      "size": 402639,
+      "changelog": "- Refactored the sidecar into protocol, session, storage, library, and process probe modules.\n- Added folder/group management, session broadcast, command movement, and process inspect/kill support.\n- Targets the Toolbag 0.3.2 built-in PowerShell Session Manager UI."
+    },
+    {
       "version": "0.1.0",
       "minAppVersion": "0.3.0",
       "publishedAt": "2026-05-18T02:38:01Z",
